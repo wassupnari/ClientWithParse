@@ -51,6 +51,14 @@
                                     <action selector="onSigninClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOB-wA-6yv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3h-gA-OAG">
+                                <frame key="frameInset" minX="162" minY="377" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to Chat"/>
+                                <connections>
+                                    <segue destination="a43-UG-G6S" kind="show" id="LqY-pX-4NW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -59,7 +67,6 @@
                         <outlet property="loginButton" destination="WK5-FO-J4A" id="t5I-oF-kBj"/>
                         <outlet property="pwTextField" destination="1ca-2r-hd6" id="TmK-KZ-bBF"/>
                         <outlet property="signupButton" destination="PQy-T8-Xd3" id="0G9-ZD-gtq"/>
-                        <segue destination="7eb-uC-loe" kind="presentation" id="Xb8-H0-n72"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -77,20 +84,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ChatView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWz-Hw-6vy">
-                                <frame key="frameInset" minX="150" minY="90" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99N-gP-Hhg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="eFo-yx-uFf"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZm-b1-sEG">
+                                <state key="normal" title="Send"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tZm-b1-sEG" secondAttribute="trailing" constant="16" id="Tdt-3Q-kxI"/>
+                            <constraint firstItem="99N-gP-Hhg" firstAttribute="leading" secondItem="fTo-2D-4gL" secondAttribute="leading" constant="16" id="fsT-oO-Hl1"/>
+                            <constraint firstItem="tZm-b1-sEG" firstAttribute="top" secondItem="99N-gP-Hhg" secondAttribute="bottom" constant="16" id="hEF-k6-4Zh"/>
+                            <constraint firstItem="99N-gP-Hhg" firstAttribute="top" secondItem="NmG-Tq-t4h" secondAttribute="bottom" constant="16" id="qua-qb-7Xs"/>
+                            <constraint firstAttribute="trailing" secondItem="99N-gP-Hhg" secondAttribute="trailing" constant="16" id="t5N-MQ-s31"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YWG-nk-qAJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lej-1z-b5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="37"/>
+            <point key="canvasLocation" x="1983.2" y="115.59220389805098"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U40-PO-ap5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a43-UG-G6S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u1p-PA-YX5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7eb-uC-loe" kind="relationship" relationship="rootViewController" id="zJo-ew-3WL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTv-pl-qhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="115.59220389805098"/>
         </scene>
     </scenes>
 </document>
