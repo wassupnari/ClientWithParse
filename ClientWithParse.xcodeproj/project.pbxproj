@@ -12,6 +12,7 @@
 		4D0E2C3A1DC2DCF1007B81F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E2C381DC2DCF1007B81F5 /* Main.storyboard */; };
 		4D0E2C3C1DC2DCF1007B81F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E2C3B1DC2DCF1007B81F5 /* Assets.xcassets */; };
 		4D0E2C3F1DC2DCF1007B81F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E2C3D1DC2DCF1007B81F5 /* LaunchScreen.storyboard */; };
+		4D0E2C471DC2DFED007B81F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E2C461DC2DFED007B81F5 /* LoginViewController.swift */; };
 		A05E6587AA7EAAE9664A7ADC /* Pods_ClientWithParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E7E31B889440DE38635CD4 /* Pods_ClientWithParse.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		4D0E2C3B1DC2DCF1007B81F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D0E2C3E1DC2DCF1007B81F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D0E2C401DC2DCF1007B81F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D0E2C461DC2DFED007B81F5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5F19674CC28452B0DDA187D1 /* Pods-ClientWithParse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientWithParse.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClientWithParse/Pods-ClientWithParse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,14 +71,23 @@
 		4D0E2C331DC2DCF1007B81F5 /* ClientWithParse */ = {
 			isa = PBXGroup;
 			children = (
+				4D0E2C481DC2DFF5007B81F5 /* View Controllers */,
 				4D0E2C341DC2DCF1007B81F5 /* AppDelegate.swift */,
-				4D0E2C361DC2DCF1007B81F5 /* ViewController.swift */,
 				4D0E2C381DC2DCF1007B81F5 /* Main.storyboard */,
 				4D0E2C3B1DC2DCF1007B81F5 /* Assets.xcassets */,
 				4D0E2C3D1DC2DCF1007B81F5 /* LaunchScreen.storyboard */,
 				4D0E2C401DC2DCF1007B81F5 /* Info.plist */,
 			);
 			path = ClientWithParse;
+			sourceTree = "<group>";
+		};
+		4D0E2C481DC2DFF5007B81F5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D0E2C361DC2DCF1007B81F5 /* ViewController.swift */,
+				4D0E2C461DC2DFED007B81F5 /* LoginViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		9103689BF1DD2808493D4592 /* Pods */ = {
@@ -211,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0E2C471DC2DFED007B81F5 /* LoginViewController.swift in Sources */,
 				4D0E2C371DC2DCF1007B81F5 /* ViewController.swift in Sources */,
 				4D0E2C351DC2DCF1007B81F5 /* AppDelegate.swift in Sources */,
 			);
